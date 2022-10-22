@@ -5,8 +5,14 @@ import (
 	"runtime"
 )
 
+func test(x int) {
+	fmt.Println("Start test function")
+	return
+}
+
 func main() {
 	fmt.Print("Go runs on ")
+
 	switch os := runtime.GOOS; os {
 	case "darwin":
 		fmt.Println("OS X.")
