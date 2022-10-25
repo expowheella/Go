@@ -17,5 +17,8 @@ func main() {
 	fmt.Println(m)
 
 	m["Bell Labs"] = Coordinate{40.68433, -74.39967}
-	fmt.Printf("Coordinates of Bell Labs: %v", m["Bell Labs"])
+	fmt.Printf("Coordinates of Bell Labs: %v \n", m["Bell Labs"])
+
+	testMap := make(map[string]int)
+	fmt.Printf("Print testMap %v", testMap)
 }
