@@ -4,17 +4,19 @@ import (
 	"fmt"
 )
 
-type action interface {
-	ChangeName(arg string)
-	WhatItDoes()
-}
-
+// Let's create two structures for our example
 type Person struct {
 	name string
 }
 
 type Car struct {
 	model string
+}
+
+// Let's create an interface to access structure attributes via methods
+type action interface {
+	ChangeName(arg string)
+	WhatItDoes()
 }
 
 func (p *Person) WhatItDoes() {
@@ -37,6 +39,7 @@ func (c *Car) ChangeName(arg string) {
 }
 
 func main() {
+	// create instances of the structures connected to the interface
 	var bu, m action = &Person{}, &Car{}
 	bu.ChangeName("BU")
 	m.ChangeName("MNW")
