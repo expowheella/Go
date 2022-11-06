@@ -9,21 +9,22 @@ type Person struct {
 }
 
 // create a method - fullName() for Person structure which returns string
-func (receiver Person) fullName() string {
-	return (receiver.name + " " + receiver.surname)
+func (p Person) String() string {
+	return fmt.Sprintln("Mr." + p.name + " " + p.surname)
 }
 
 func main() {
 	// create an instance of structure (class in Python)
 	human := Person{"Bulat", "Iakhin"}
-	human.pointerMethod()
+	// human.pointerMethod()
 	// call method fullName() on human
-	fmt.Println(human.fullName())
+	// fmt.Println(human.fullName())
+	fmt.Println(human)
 
 }
 
-// Pointer receiver does not return anything
+// Pointer p does not return anything
 // It is just influence a structure
-func (p *Person) pointerMethod() {
-	p.name = "Mr. " + p.name
-}
+// func (p *Person) pointerMethod() {
+// 	p.name = "Mr. " + p.name
+// }

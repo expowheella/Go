@@ -24,12 +24,18 @@ func main() {
 
 	var p *Printer
 	p.Print()
-	fmt.Printf("\n %v %T", p, p)
+	fmt.Printf("\n %v %T \n", p, p)
 
 	var i interface{} = 1
-	fmt.Printf("\n %v %T", i, i)
+	fmt.Printf("\n %v %T \n", i, i)
 	test, ok := i.(int)
 	fmt.Print("\n", test, ok)
+
+	// checkin type of value pushed through interface
+	// using our function - checkType()
+	checkType(1)
+	checkType("hello")
+	checkType(true)
 
 }
 
@@ -74,7 +80,7 @@ func (h House) getName() interface{} {
 }
 
 func (u *Printer) Print() {
-	fmt.Print(u)
+	fmt.Print(u, "\n")
 }
 
 //////////////////////////////////////
@@ -100,4 +106,17 @@ type PrintInterface interface {
 
 func describe(u UserInterface) {
 	fmt.Printf("(%v, %T)\n", u, u)
+}
+
+// Checking type of value pushed through interface
+// this is called "Type switches"
+func checkType(item interface{}) {
+	switch value := item.(type) {
+	case int:
+		fmt.Printf("\n %v is integer \n", value)
+	case string:
+		fmt.Printf("\n %v is string \n", value)
+	default:
+		fmt.Printf("\n %v is undefined type \n", value)
+	}
 }
