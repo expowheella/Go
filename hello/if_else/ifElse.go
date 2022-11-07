@@ -1,18 +1,17 @@
-// package main
+package main
 
-// import "fmt"
+import "fmt"
 
-// func myFitstFunction(x, y int) []int {
-// 	lst := []int{}
-// 	result := x * y
-// 	lst = append(lst, result)
-// 	return lst
-// }
+func myFitstFunction(x, y int) []int {
+	lst := []int{}
+	result := x * y
+	lst = append(lst, result)
+	return lst
+}
 
-// func main() {
-
-// 	for x := 0; x < 10; x++ {
-// 		result := myFitstFunction(x, 2)
-// 	}
-// 	fmt.Println(result)
-// }
+func main() {
+	if x := 1; x > 0 {
+		result := myFitstFunction(x, 2)
+		fmt.Println(result)
+	}
+}
