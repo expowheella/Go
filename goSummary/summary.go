@@ -2,9 +2,13 @@ package main
 
 import (
 	"fmt"
+	"strconv" // Atoi converter
 )
 
 func main() {
+	strV := "a"
+	intV, err := strconv.Atoi(strV)
+	fmt.Println(intV, err)
 
 	// Create a slice with make
 	slice := make([]int, 0)
