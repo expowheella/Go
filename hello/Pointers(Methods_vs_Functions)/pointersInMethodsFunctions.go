@@ -40,13 +40,13 @@ func main() {
 
 	// lets create an instance of Car
 
-	Mers := Car{"Mersedes"}
+	Mers := &Car{"Mersedes"}
 	fmt.Println("Show Car instance :", Mers)
 
 	//------------------------------------------------------------
 
 	// lets add a model using AddModel method
-	// by calling an method on the instance with an attribute;
+	// by calling a method on the instance with an attribute;
 	// we use { Instance.Method } when call it
 
 	Mers.AddModel("E200")
@@ -59,6 +59,6 @@ func main() {
 	// in order to point it to the structure's instance;
 	// we use only { Function(&instance name, argument) } when call it
 
-	AddYear(&Mers, 2022)
+	AddYear(Mers, 2022)
 	fmt.Println("Show updated Car instance (using function AddYear): ", Mers)
 }

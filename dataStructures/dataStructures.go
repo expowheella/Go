@@ -37,8 +37,12 @@ func main() {
 	//
 	// Queue (Очередь)FIFO
 
+	//
+	// Linked List (Двусвязный список)
+
 }
 
+// Stack
 func appendArray(array, s []int) (stack []int) {
 	for i := 0; i < len(array); i++ {
 		s = append(s, array[i])

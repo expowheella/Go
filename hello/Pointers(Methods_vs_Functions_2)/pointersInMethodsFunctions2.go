@@ -41,7 +41,7 @@ func main() {
 	fmt.Printf("instance name: %v\n", instance2.name)
 	fmt.Printf("change name using method and pointer: %v\n", instance2.ChangeName())
 	fmt.Printf("instance name: %v\n", instance2.name)
-	// IN ORDER TO ACCESS TO THE STRUCTURE ATTRIBURE, WE USE ASTERIX(*) POINTER WITH POINTRT(&)
+	// IN ORDER TO ACCESS TO THE STRUCTURE ATTRIBURE, WE USE ASTERIX(*) POINTER WITH POINTER(&)
 	// TO THE STRUCTURE WHEN WE INSTANTIATE AN INSTANCE
 	fmt.Printf("change name using function: %v\n", ChangeToNick(*instance2))
 	fmt.Printf("instance name: %v\n", instance2.name)
