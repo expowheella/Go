@@ -1,10 +1,46 @@
 package main
 
-import "fmt"
+func CheckPrime(digit int) bool {
+	var count int
+	for i := 1; i <= digit; i++ {
+		if digit%i == 0 {
+			count++
+		}
+	}
+	if count == 2 {
+		return true
+	} else {
+		return false
+	}
+}
 
 func main() {
-	// stringExample()
+	// var lastDigit int
+	// fmt.Scan(&lastDigit)
 
-	numbers := []int{1, 2, 3, 4, 5, 1} // Пример входных данных
-	fmt.Println(containsDuplicate(numbers))
+	// for i := 3; i <= lastDigit; i = i + 5 {
+	// 	if CheckPrime(i) {
+	// 		fmt.Print("хоп")
+	// 	} else {
+	// 		fmt.Print(i)
+	// 	}
+	// 	fmt.Print(" ")
+	// }
+
+	// ---------------------------------
+
+	// Запускаем код из файла Structs.go
+	// Structs()
+
+	// Запускаем пример с прямоугольником
+	// Geometry()
+
+	// ---------------------------------
+
+	// Запускаем Interface.go
+	// myInterface()
+
+	// Передаем интерфейс в качестве аргумента
+	InterfaceInArgument()
+
 }
