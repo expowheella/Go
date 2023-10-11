@@ -41,6 +41,10 @@ func main() {
 	// myInterface()
 
 	// Передаем интерфейс в качестве аргумента
-	InterfaceInArgument()
+	// InterfaceInArgument()
+
+	// OpenFile()
+	// exercise_1_1()
+	Exercise_1_2()
 
 }

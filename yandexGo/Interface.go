@@ -56,6 +56,30 @@ func CalcShape(s Shape) int64 {
 	return s.AreaMethod()
 }
 
+// создадим функцию, в которую передадим пустой интерфейс,
+// но в данном случае это слайс типа пустой интерфейс
+func EmptyInterface(arg []interface{}) {
+	values := arg
+	values = append(values, "hello")
+	values = append(values, 42)
+	values = append(values, true)
+	fmt.Println(values)
+}
+
+// проверка типа переменной
+func PrintType(x interface{}) {
+	switch x.(type) {
+	case string:
+		fmt.Println("string")
+	case int:
+		fmt.Println("int")
+	case bool:
+		fmt.Println("bool")
+	default:
+		fmt.Println("unknown")
+	}
+}
+
 func InterfaceInArgument() {
 	// создаем экземпляр структуры прямоугольника
 	myRect := RectangleModel{
@@ -69,5 +93,12 @@ func InterfaceInArgument() {
 	// вызываем функцию с передачей экземпляра структуры, как аргумент
 	area := CalcShape(myRect)
 	fmt.Println(area)
+
+	// объявим пустой интерфейс и передадим его в функцию в качестве аргумента
+	var sliceInterface []interface{}
+	EmptyInterface(sliceInterface)
+
+	var emptyInterface interface{}
+	PrintType(emptyInterface)
 
 }
