@@ -5,14 +5,14 @@ import (
 )
 
 // Структура Студент
-type Student struct {
+type YoungStudent struct {
 	Name string
 	Age  int
 }
 
 // Метод должен быть связан с определённой структурой.
 // Перед именем функции указывается имя структуры (так называемый ресивер), с которой она связана:
-func (s Student) printData() {
+func (s YoungStudent) printData() {
 	fmt.Printf("Name: %s, Age: %d\n", s.Name, s.Age)
 }
 
@@ -23,7 +23,7 @@ func (s Student) printData() {
 // Вызов метода:
 
 func Structs() {
-	student1 := Student{Name: "vasya", Age: 15}
+	student1 := YoungStudent{Name: "vasya", Age: 15}
 	student1.printData()
 }
 

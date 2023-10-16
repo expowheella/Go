@@ -45,6 +45,7 @@ func main() {
 
 	// OpenFile()
 	// exercise_1_1()
-	Exercise_1_2()
+	// Exercise_1_2()
+	Exercise_1_3()
 
 }
