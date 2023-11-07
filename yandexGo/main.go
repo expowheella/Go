@@ -1,5 +1,7 @@
 package main
 
+import files "filesInGo.go"
+
 func CheckPrime(digit int) bool {
 	var count int
 	for i := 1; i <= digit; i++ {
@@ -46,6 +48,8 @@ func main() {
 	// OpenFile()
 	// exercise_1_1()
 	// Exercise_1_2()
-	Exercise_1_3()
+	// Exercise_1_3()
+	// Exercise_1_4()
+	files.Files()
 
 }
