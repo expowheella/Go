@@ -15,6 +15,13 @@ func Files() {
 	// Seek
 	// opening a file
 	file, _ := os.Open("literature.txt")
+	// closing file at the end of the programm execution (defer means executed at the end)
+	defer func() {
+		err := file.Close()
+		if err != nil {
+			fmt.Println("File closing error")
+		}
+	}()
 
 	// creating a buffer
 	buffer := make([]byte, 100)
